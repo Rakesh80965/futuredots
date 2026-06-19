@@ -1,0 +1,35 @@
+
+.impact { background: var(--bg); }
+.impact-header { margin-bottom: 2.5rem; }
+.impact-filters { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem; }
+.filter-btn {
+  background: var(--bg2); border: 1px solid var(--border);
+  color: var(--text-light);
+  font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 0.6rem 1.4rem; border-radius: 100px; cursor: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.filter-btn:hover { color: var(--text); border-color: var(--accent); background: #ffffff; }
+.filter-btn.active { background: var(--accent); color: var(--text); border-color: var(--accent); box-shadow: 0 4px 15px rgba(251, 191, 36, 0.2); }
+.impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.story-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem;
+  box-shadow: var(--shadow-sm); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md), 0 10px 25px rgba(225, 29, 72, 0.04);
+  border-color: var(--accent-yellow);
+}
+.story-cat { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; display: block; margin-bottom: 0.75rem; color: var(--accent) !important; }
+.story-card:nth-child(1) .story-cat { color: var(--r5); }
+.story-card:nth-child(2) .story-cat { color: var(--r1); }
+.story-card:nth-child(3) .story-cat { color: var(--r6); }
+.story-card:nth-child(4) .story-cat { color: var(--r3); }
+.story-card:nth-child(5) .story-cat { color: var(--r2); }
+.story-card:nth-child(6) .story-cat { color: var(--r4); }
+.story-card h3 { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+.story-card p { color: var(--text-light); font-size: 0.88rem; line-height: 1.65; }
+@media (max-width: 900px) { .impact-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .impact-grid { grid-template-columns: 1fr; } }

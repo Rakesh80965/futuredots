@@ -1,0 +1,21 @@
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.75s ease;
+}
+
+.intro-screen.fading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-video {
+  max-width: min(640px, 88vw);
+  max-height: 82vh;
+  object-fit: contain;
+}

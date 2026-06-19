@@ -1,0 +1,30 @@
+
+.marquee-strip {
+  background: var(--accent);
+  overflow: hidden;
+  padding: 0.9rem 0;
+  position: relative;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-scroll 30s linear infinite;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-item {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  padding: 0 3rem;
+  flex-shrink: 0;
+}
+.marquee-dot { color: rgba(255,255,255,0.4); margin-right: 0.75rem; }
+.marquee-strip:hover .marquee-track { animation-play-state: paused; }
